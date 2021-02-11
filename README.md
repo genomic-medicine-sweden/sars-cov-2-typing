@@ -20,8 +20,20 @@
 ./hcp_covid.py -ep <endpoint-url> -aki <aws_access_key_id> -sak <aws_secret_access_key> -b <bucketname> -p "path/to/files*R2*"
 ```
 
-> downloading files
+> downloading a single file
 
 ```python
-./hcp_covid.py -ep <endpoint-url> -aki <aws_access_key_id> -sak <aws_secret_access_key> -b <bucketname> -d <filename on HCP> -o <path/to/outputdir>
+./hcp_covid.py -ep <endpoint-url> -aki <aws_access_key_id> -sak <aws_secret_access_key> -b <bucketname> -f <filename on HCP> -o <path/to/outputdir> --download
+```
+
+> search for files in bucket (will print)
+
+```python
+./hcp_covid.py -ep <endpoint-url> -aki <aws_access_key_id> -sak <aws_secret_access_key> -b <bucketname> -q <query> 
+```
+
+> downloading several files by using query function
+
+```python
+./hcp_covid.py -ep <endpoint-url> -aki <aws_access_key_id> -sak <aws_secret_access_key> -b <bucketname> -q <query> -o <path/to/outputdir> --download
 ```
